@@ -1,0 +1,14 @@
+{
+    "authorize": {
+        "icon": "../assets/info.svg",
+        "msg": "Your Github account was successufly authorized",
+        "bg": "bg-blue-100",
+        "text": "text-blue-700"
+    },
+    "error": {
+        "icon": "../assets/info.svg",
+        "msg": "error error",
+        "bg": "bg-red-100",
+        "text": "text-red-700"
+    }
+}
