@@ -1,22 +1,22 @@
 <template>
   <div
-    class="
-      justify-between
-      w-10/12
-      px-2
-      py-1
-      flex
-      items-center
-      m-auto
-      msg
-    "
+    class="justify-between w-10/12 px-2 py-1 flex items-center m-auto msg"
     :class="msgLabel.bg"
   >
-    <p> 
-      <img v-if="msgLabel.icon" :src="msgLabel.icon"  class="w-6 h-6 inline-block" alt="msg icon" />
-      <span class="p-2" :class="msgLabel.text" v-text="msgLabel.msg">  </span>
+    <p>
+      <img
+        src="../assets/info.svg"
+        class="w-6 h-6 inline-block"
+        alt="msg icon"
+      />
+      <span class="p-2" :class="msgLabel.text" v-text="msgLabel.msg"> </span>
     </p>
-    <img src="../assets/close.svg" class="w-6 h-6 cursor-pointer" v-on:click="hideMsg" alt="close message icon" />
+    <img
+      src="../assets/close.svg"
+      class="w-6 h-6 cursor-pointer"
+      @click="hideMsg"
+      alt="close message icon"
+    />
   </div>
 </template>
 
@@ -26,7 +26,7 @@ import data from "./msg.json";
 export default {
   data() {
     return {
-      msgLabel:{}
+      msgLabel: {}
     };
   },
 
@@ -34,13 +34,13 @@ export default {
 
   methods: {
     hideMsg: function() {
-      document.querySelector(".msg").style.display = "none";
-
-}
+      this.$emit('close')
+      // document.querySelector(".msg").style.display = "none";
+    }
   },
 
   mounted() {
-    this.msgLabel = data[this.$props.msgType]
+    this.msgLabel = data[this.$props.msgType];
   }
 };
 </script>
