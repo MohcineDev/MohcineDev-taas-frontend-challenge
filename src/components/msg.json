@@ -1,6 +1,6 @@
 {
     "authorize": {
-        "icon": "../assets/info.svg",
+        "icon": "../assets/img/info.svg",
         "msg": "Your Github account was successufly authorized",
         "bg": "bg-blue-100",
         "text": "text-blue-700"
